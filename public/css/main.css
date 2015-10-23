@@ -9,7 +9,7 @@ p {
 	margin: 8px 0 0 0;
 }
 
-.container p {
+.clem-container p {
 	text-align: center;
 	padding: 0;
 }
@@ -29,14 +29,15 @@ img {
 	color: #FFA000;
 }
 
+
 /****** Click Styling ******/
 
-.btn-container {	/* Styling for the div that contains the buttons */
+.clem-btn-container {	
 	margin: -10px auto 0 auto;
 	text-align: center;
 }
 
-.btn {	/* Styling for buttons */
+.clem-btn {	
 	margin: 0 8px;
 	color: white;
 	background-color: #00BCD4;
@@ -49,17 +50,31 @@ img {
 	font-weight: 500;
 }
 
-.btn:focus {	/* Remove outline when hovering over button */
+.clem-btn:focus {
 	outline: none;
 }
 
-.btn:active {	/* Scale the button down by 10% when clicking on button */
+
+.clem-btn:active {	
 	transform: scale(0.9, 0.9);
 	-webkit-transform: scale(0.9, 0.9);
 	-moz-transform: scale(0.9, 0.9);
 }
 
-.btn-delete {	/* Styling for delete button */
+.btn-delete {	
 	background-color: #ECEFF1;
 	color: #212121;
+}
+
+
+
+/****** My Styles ******/
+
+.delete-todo {
+	margin-left: 5px;
+}
+
+.todo-container {
+	max-width: 800px;
+	margin: auto;
 }

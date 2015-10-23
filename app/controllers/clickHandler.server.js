@@ -42,7 +42,7 @@ function clickHandler (db) {
       });
    };
 
-   this.resetClicks = function (req, res) {
+   this.resetClicks = function (req, res) {db.collect
       clicks.update({}, { 'clicks': 0 }, function (err, result) {
          if (err) {
             throw err;

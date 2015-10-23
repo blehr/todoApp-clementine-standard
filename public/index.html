@@ -2,29 +2,67 @@
 
 <html>
 
-   <head>
-      <title>Clementine.js - The elegant and lightweight full-stack boilerplate.</title>
-      <link href="http://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
-      <link href="/public/css/main.css" rel="stylesheet" type="text/css">  
-   </head>
+<head>
+   <title>Clementine.js - The elegant and lightweight full-stack boilerplate.</title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+   <link href="/public/css/main.css" rel="stylesheet" type="text/css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-   <body>
-      <div class="container">
-         <img src="/public/img/clementine_150.png" />
-         <br />
-         <p class="clementine-text">Clementine.js</p>
+<body>
+   <div class="clem-container">
+      <img src="/public/img/clementine_150.png" />
+      <br />
+      <p class="clementine-text">Clementine.js</p>
+   </div>
+
+   <div class="clem-container">
+      <p>You have clicked the button <span id="click-nbr"></span> times.</p>
+      <br />
+      <div class="clem-btn-container">
+         <button type="submit" class="clem-btn btn-add">CLICK ME!</button>
+         <button class="clem-btn btn-delete">RESET</button>
       </div>
+   </div>
 
-      <div class="container">
-         <p>You have clicked the button <span id="click-nbr"></span> times.</p>   
-         <br />
-         <div class="btn-container">
-            <button type="submit" class="btn btn-add">CLICK ME!</button>
-            <button class="btn btn-delete">RESET</button>
+   <div class="container todo-container">
+      <h1 class="text-center">Todos</h1>
+      <div class="row">
+         <div class="col-sm-8">
+            <div class="form-group">
+               <input type="hidden" id="id-holder" name="id-holder" value="" />
+               <label for="title">Title</label>
+               <input type="text" id="title" name="title" class="form-control" />
+            </div>
+
+            <div class="form-group">
+               <label for="message">Message</label>
+               <textarea type="textarea" id="message" name="message" class="form-control"></textarea>
+            </div>
+            <div class="form-buttons-container">
+               <div id="add-button">
+                  <input type="submit" class="btn btn-primary" id="submit" value="Add Todo" />
+               </div>
+               <div id="edit-buttons">
+                  <input type="button" class="btn btn-primary" id="cancel" value="Cancel Editing" />
+                  <input type="button" class="btn btn-primary" id="edit" value="Update Todo" />
+               </div>
+            </div>
          </div>
+
+         <div class="col-sm-4">
+            <div class="todos"></div>
+         </div>
+         
       </div>
 
-      <script type="text/javascript" src="/controllers/clickController.client.js"></script>   
-   </body>
+   </div>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script type="text/javascript" src="/controllers/clickController.client.js"></script>
+   <script type="text/javascript" src="/controllers/todoController.client.js"></script>
+</body>
 
 </html>
